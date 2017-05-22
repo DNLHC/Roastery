@@ -1,0 +1,22 @@
+extends /blocks/layout-default/layout-default
+include ../blocks/header/header
+include ../blocks/section/section
+include ../blocks/highlights/highlights
+include ../blocks/promo/promo
+include ../blocks/trends/trends
+include ../blocks/engagements/engagements
+
+
+block head
+	- var pageTitle = 'Roastery year review';
+
+block content
+	- var dataHighlights = getData('highlights');
+	- var dataEngagements = getData('engagements');
+
+	+header
+	+e.MAIN.content
+		+section.content: +highlights(dataHighlights)
+		+section._promo.content: +promo
+		+section.content: +trends
+		+section._purple._shade.content: +engagements(dataEngagements)

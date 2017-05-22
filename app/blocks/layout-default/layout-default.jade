@@ -1,0 +1,19 @@
+include /../node_modules/bemto.jade/bemto
+include ../page/page
+include ../scripts/scripts
+
+doctype html
+html(lang='eng')
+	include ../head/head
+	+page
+		include ../../svg/patterns.svg
+		block content
+		script.
+			var h = document.getElementsByTagName('head')[0];
+			var link = document.createElement('link');
+			link.href = '/assets/styles/woff2.min.css';
+			link.type = 'text/css';
+			link.rel = 'stylesheet';
+			h.appendChild(link);
+
+		+scripts(['app.min.js'])

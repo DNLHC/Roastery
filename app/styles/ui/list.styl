@@ -1,0 +1,20 @@
+.list
+	display block
+	padding-left 20px
+	position relative
+	margin-y 20px
+
+	&:before
+		content ''
+		position absolute
+		left 0
+		top 0
+		height 100%
+		width 2px
+		background linear-gradient($magenta, $cyan)
+
+	&__item
+		color #CCCCCC
+
+		&:not(:last-child)
+			margin-bottom 7px

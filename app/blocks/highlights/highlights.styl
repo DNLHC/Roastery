@@ -1,0 +1,86 @@
+.highlights
+	$dateSize = 70px
+	$dateStripe = shade($cyan, 35%)
+
+	display block
+
+	&__item
+		display flex
+		justify-content space-around
+		align-items center
+		padding-top $dateSize + 10px
+		position relative
+		min-height 360px
+
+		&:not(:last-child)
+			padding-bottom 40px
+
+		&_reverse
+			flex-direction row-reverse
+
+			& ^[0]__content
+				text-align left
+
+	&__image
+
+		img
+			max-width 100%
+			height auto
+			display block
+
+	&__image
+	&__content
+		margin-x 100px
+		flex 0 0 35%
+
+	&__mark
+		position absolute
+		left 50%
+		top 0
+		transform translateX(-50%)
+		height 100%
+
+		&:after
+			content ''
+			position absolute
+			top $dateSize
+			left 0
+			height 'calc(100% - %s)' % $dateSize
+			background-color $dateStripe
+			width 1px
+
+	&__date
+		size $dateSize
+		display block
+		position absolute
+		top 0
+		left -(@width / 2)
+		text-align center
+		font-weight bold
+		font-size 17px
+		padding 10px 15px
+		line-height 1.5
+		border-radius 50%
+		border 1px solid $dateStripe
+
+	&__month
+		display inline-block
+		text-transform uppercase
+		border-bottom 1px solid $dateStripe
+		margin-bottom 2px
+		text-decoration none
+
+
+	&__content
+		flex 0 0 35%
+		text-align right
+
+	&__title
+		font-size 19px
+		text-transform uppercase
+		color $cyan
+		margin-bottom 10px
+
+	&__lead
+		font-size 16px
+		margin-bottom 30px

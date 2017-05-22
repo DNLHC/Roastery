@@ -1,0 +1,26 @@
+<svg class='pattern-container'>
+	<pattern class="line-pattern" id="stripePattern" patternUnits="userSpaceOnUse" width="8" height="8" enable-background="new 0 0 8 8">
+		<path fill="#9DEFED" d="M7,0L7,0v1h1V0H7z"></path>
+		<path fill="#9DEFED" d="M6,1L6,1v1h1V1H6z"></path>
+		<path fill="#9DEFED" d="M5,2L5,2v1h1V2H5z"></path>
+		<path fill="#9DEFED" d="M4,3L4,3v1h1V3H4z"></path>
+		<path fill="#9DEFED" d="M3,4L3,4v1h1V4H3z"></path>
+		<path fill="#9DEFED" d="M2,5L2,5v1h1V5H2z"></path>
+		<path fill="#9DEFED" d="M1,6L1,6v1h1V6H1z"></path>
+		<path fill="#9DEFED" d="M0,7L0,7v1h1V7H0z"></path>
+		<path fill="none" d="M7,1L7,1v1h1V1H7z"></path>
+		<path fill="none" d="M6,2L6,2v1h1V2H6z"></path>
+		<path fill="none" d="M5,3L5,3v1h1V3H5z"></path>
+		<path fill="none" d="M4,4L4,4v1h1V4H4z"></path>
+		<path fill="none" d="M3,5L3,5v1h1V5H3z"></path>
+		<path fill="none" d="M2,6L2,6v1h1V6H2z"></path>
+		<path fill="none" d="M1,7L1,7v1h1V7H1z"></path>
+		<path fill="none" d="M6,0L6,0v1h1V0H6z"></path>
+		<path fill="none" d="M5,1L5,1v1h1V1H5z"></path>
+		<path fill="none" d="M4,2L4,2v1h1V2H4z"></path>
+		<path fill="none" d="M3,3L3,3v1h1V3H3z"></path>
+		<path fill="none" d="M2,4L2,4v1h1V4H2z"></path>
+		<path fill="none" d="M1,5L1,5v1h1V5H1z"></path>
+		<path fill="none" d="M0,6L0,6v1h1V6H0z"></path>
+	</pattern>
+</svg>

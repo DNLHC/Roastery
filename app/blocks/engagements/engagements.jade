@@ -1,0 +1,14 @@
+include ../icon/icon
+
+mixin engagements(data)
+	+b.engagements&attributes(attributes)
+		+b.H2.title.section__title We increased engagements
+		each row in data
+			+e.UL.list(aria-label= row.name)
+				each item in row.items
+					+e.item
+						+icon(item.icon, false)
+						+e.value= item.value
+						+e.P.label= item.label
+						+e.separator.rule._white
+		block

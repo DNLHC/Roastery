@@ -1,0 +1,46 @@
+
+mixin highlightSection(data, index)
+	- var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+	- var date = new Date(data.date + ', 2016');
+	- var month = date.getMonth(), day = date.getDate();
+	- month = month >= 10 ? month : '0' + month;
+	- day = day >= 10 ? day : '0' + day;
+	- var timeStamp = [date.getFullYear(), month, day].join('-');
+
+	+e.SECTION.item(class=(index % 2 ? '_reverse' : null))
+
+		+e.content
+			+e.H4.title(id='highlight-title-#{index}')
+				= data.title
+			+e.P.lead(id='highlight-lead-#{index}')
+				= data.content
+			+b.button(href='#',
+				aria-labelledby='highlight-title-#{index}',
+				aria-describedby='hightlight-lead-#{index}')
+				= 'Learn more'
+
+		- var monthName = monthNames[date.getMonth()]
+
+		+e.mark
+			+e.TIME.date(datetime= timeStamp)
+				+e.ABBR.month(title= monthName)= monthName.slice(0, 3)
+				= day
+
+		- var imgPath = 'assets/images/highlight-image-';
+
+		+e.FIGURE.image: img(
+			src='#{imgPath}#{index}.jpg',
+			srcset='#{imgPath}#{index}@2x.jpg 2x',
+			alt="")
+
+
+mixin highlights(options)
+	- var options = options || [];
+	+b.highlights&attributes(attributes)
+		+b.H2.title_cyan.section__title Highlights of 2016
+
+		each highlight, index in options
+			+highlightSection(highlight, index)
+
+		block

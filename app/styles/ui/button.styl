@@ -1,0 +1,52 @@
+.button
+	display inline-block
+	vertical-align baseline
+	position relative
+	max-width 100%
+	padding 10px 18px
+
+	text-align center
+	white-space nowrap
+	font-size 16px
+	text-decoration none
+	color $cyan
+
+	background none
+	border 1px solid $cyan
+	border-radius 4px
+	overflow hidden
+
+	cursor pointer
+	user-select none
+	transition color .3s
+
+	&:after
+		content ''
+		size 0
+		position absolute
+		left 50%
+		top 50%
+		transform translate(-50%, -50%)
+		border-radius 50%
+		border 0px solid $cyan
+		z-index -1
+		transition border-width .2s ease-in
+
+	&:hover
+		color $darkBlue
+
+		&:after
+			border-width 100px
+
+	&_active
+		color $darkBlue
+
+		&:after
+			border-width 100px
+
+	&_magenta
+		border-color $magenta
+		color $magenta
+
+		&:after
+			border-color $magenta

@@ -1,0 +1,32 @@
+
+.title
+	color $white
+	text-align center
+	margin-bottom 60px
+
+	&_cyan
+		color $cyan
+
+	&_underline
+		$titleOffset = 45px
+		display inline-block
+		position relative
+		margin-y ($titleOffset + 75)
+
+
+		&:before,
+		&:after
+			content ''
+			position absolute
+			height 6px
+			width 140px
+
+		&:after
+			bottom - $titleOffset
+			right 0
+			background-image linear-gradient(to left, $cyan, $cyan 115px, transparent 115px, transparent 123px, $magenta 123px, $magenta 0)
+
+		&:before
+			top - $titleOffset
+			left 0
+			background-image linear-gradient(to right, $cyan, $cyan 115px, transparent 115px, transparent 123px, $magenta 123px, $magenta 0)

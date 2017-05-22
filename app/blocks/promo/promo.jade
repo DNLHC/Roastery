@@ -1,0 +1,27 @@
+mixin promo()
+	+b.promo&attributes(attributes)
+		+b.H2.title_cyan.section__title DevOps as a service
+		+e.row
+			+e.content
+				+e.H3.heading You don't have to build your DevOps stack from scratch
+				+e.P.lead We have pre-written Infrastructure Packages for most common infrastructure problems:
+				+b.UL.list
+					+e.item Network topology
+					+e.item Docker cluster
+					+e.item Monitoring and alerting
+					+e.item Continuous Delivery
+					+e.item And many others
+
+				+b.link(href='#') See our infractructure packages
+
+			+e.FIGURE.image: img(src="assets/images/grunty-rest.svg", alt="")
+		+e.row._reverse
+			+e.content
+				+e.H3.heading You don't have to maintain your DevOps stack alone
+				+e.P.lead Join the Roastery Community, a collection of companies that are all running the same infrastructure packages.
+				+e.P.lead Whenever we add a new module, you get it instantly and when we fix a bug for one customer, we make it available for all - better infrastructure is just a version number bump
+
+				+b.link(href='#') See our supported plans
+
+			+e.FIGURE.image: img(src="assets/images/grunty-headset.svg", alt="")
+		block

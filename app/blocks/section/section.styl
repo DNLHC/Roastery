@@ -1,0 +1,31 @@
+.section
+	display block
+	margin-top 120px
+
+	&__title
+		font-size 37px
+		font-weight normal
+
+	&_purple
+		background-color $magenta
+		background-image embedurl('../../svg/square.svg', 'utf8')
+		background-size 50px 50px
+
+	&_shade
+		position relative
+
+		&:after
+			position absolute
+			top 0
+			left 0
+			size 100%
+			background-image linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .3))
+			content ''
+
+		& > *
+			position relative
+			z-index 2
+
+	&_promo
+		margin-top 150px
+		margin-bottom 250px

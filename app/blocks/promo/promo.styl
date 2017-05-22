@@ -1,0 +1,47 @@
+.promo
+	display block
+	position relative
+
+	&:after
+		content ''
+
+		position absolute
+		top 0
+		left -35vw
+		z-index -1
+
+		height 100%
+		width 150vw
+		background-color rgba($shadeBlue, .7)
+
+		transform rotate(160deg)
+
+	&__row
+		display flex
+		align-items center
+		margin-y 50px
+		justify-content center
+
+	&__row_reverse
+		flex-direction row-reverse
+
+	&__content
+		flex 0 0 380px
+
+	&__lead
+		margin 20px 0 30px
+
+	&__lead + &__lead
+		margin-top 10px
+
+	&__image
+		flex 0 1 50%
+		text-align center
+
+		img
+			max-width 80%
+			height auto
+
+	&__heading
+		color $cyan
+		font-size 20px

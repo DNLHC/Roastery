@@ -1,0 +1,25 @@
+include ../tabs/tabs
+
+mixin trends()
+	+b.trends.js-trends&attributes(attributes)
+		+b.H2.title_cyan.section__title More mobile clients
+
+		+e.box
+			include ../../svg/graph.svg
+
+			+e.marker#trends-marker
+				+e.info
+					+e.value.js-trends-value 23%
+					p of orders came from a mobile device rather than a PC
+				include ../../svg/phone.svg
+
+			+e.aside
+				+e.P.lead In 2016, browsing for products online via mobile devices became the default even if purchasing was still done from desktops.
+				p.v-hidden#trends-label Mobile clients stats for every year
+
+				+e.controls: +tabs(
+					aria-controls='trends-marker',
+					aria-labelledby='trends-label'
+					).js-trends-controls
+
+		block

@@ -1,0 +1,62 @@
+[
+	{
+		"name": "resources",
+		"items": [
+			{
+				"label": "Blog page views",
+				"value": "27,000,000",
+				"icon": "blog"
+			},
+			{
+				"label": "Podcast listens",
+				"value": "1,542,00",
+				"icon": "podcast"
+			},
+			{
+				"label": "Guide downloads",
+				"value": "65,00",
+				"icon": "guide"
+			}
+		]
+	},
+	{
+		"name": "social",
+		"items": [
+			{
+				"label": "Facebook rections, comments & shares",
+				"value": "3,000,000",
+				"icon": "facebook"
+			},
+			{
+				"label": "Twitter likes, replies & retweets",
+				"value": "336,000",
+				"icon": "twitter"
+			},
+			{
+				"label": "Instagram likes & comments",
+				"value": "124,000",
+				"icon": "instagram"
+			}
+		]
+	},
+	{
+		"name": "support",
+		"items": [
+			{
+				"label": "Emails sent by gurus to merchants",
+				"value": "1,300,000",
+				"icon": "email"
+			},
+			{
+				"label": "Chats between Roastery gurus and merchants",
+				"value": "846,000",
+				"icon": "chat"
+			},
+			{
+				"label": "Calls between Roastery gurus and merchants",
+				"value": "636,000",
+				"icon": "call"
+			}
+		]
+	}
+]

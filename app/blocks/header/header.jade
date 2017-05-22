@@ -1,0 +1,12 @@
+include ../logo/logo
+
+mixin header()
+	+b.HEADER.header&attributes(attributes)
+		+logo
+		+e.H1.title.title._underline Pre-assembled stacks
+		+e.P.lead A look back into industry trends and the growth
+			br
+			| of our merchants, products, and capabilities.
+
+		+b.HR.rule._wide
+		block

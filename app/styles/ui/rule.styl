@@ -1,0 +1,19 @@
+.rule
+	border 0
+	margin-top 0
+	margin-x auto
+	width 70%
+	height 10px
+	max-width 160px
+	color $magenta
+	background-image embedurl('../../svg/rule.svg', 'utf8')
+	background-size auto @height
+	background-repeat repeat-x
+
+	&_wide
+		max-width 225px
+		height 17px
+		background-size auto @height
+
+	&_white
+		background-image embedurl('../../svg/rule-white.svg', 'utf8')

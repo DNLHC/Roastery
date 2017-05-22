@@ -1,0 +1,41 @@
+.link
+	display inline-block
+	vertical-align middle
+	padding-bottom 3px
+	position relative
+
+	color #ffffff
+	text-decoration none
+	text-transform uppercase
+	font-weight 500
+	font-size 15px
+	white-space nowrap
+
+	transition color .25s
+
+	&:after,
+	&:before
+		content ''
+		position absolute
+		bottom 0
+		height 2px
+		transition width .35s ease-in-out
+
+	&:after
+		left 0
+		width 80%
+		background-color $cyan
+
+	&:before
+		right 0
+		width calc(20% - 10px)
+		background-color $magenta
+
+	&:hover
+		color $cyan
+
+		&:after
+			width 0
+
+		&:before
+			width 100%
