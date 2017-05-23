@@ -1,5 +1,6 @@
 .trends
 	$boxHeight = 400px
+	$boxHeightSmall = $boxHeight - 100
 
 	display block
 	margin-bottom 205px
@@ -17,13 +18,16 @@
 		display flex
 		align-items center
 
+		+below(1070px)
+			height $boxHeightSmall
+
 	&__marker
 		position absolute
 		width 250px
-		height $boxHeight
+		height 100%
 		top 50%
 		left 0
-		margin-top -(@height / 2)
+		transform translateY(-50%)
 
 		svg
 			size $boxHeight + 135
@@ -32,6 +36,12 @@
 			left 50%
 			transform translate(-50%, -50%)
 			z-index 10
+
+			+below(1070px)
+				size $boxHeightSmall + 135
+
+		+below(1070px)
+			height $boxHeightSmall
 
 		&:after,
 		&:before
@@ -61,10 +71,17 @@
 		background-color rgba($shadeBlue, .6)
 		border-radius 20px
 
+		+below(1070px)
+			padding 10px
+			width 160px
+
 	&__value
 		font-size 2.87em
 		font-weight 600
 		letter-spacing 2px
+
+		+below(1070px)
+			font-size 2.2em
 
 	&__aside
 		margin-left auto
@@ -72,6 +89,15 @@
 		max-width 350px
 		text-align center
 		z-index 150
+
+		+below(1070px)
+			max-width 300px
+			font-size .95em
+
+	+below(920px)
+		~/__lead
+			display none
+
 
 	#svg-graph
 		position absolute
@@ -81,3 +107,15 @@
 	&__controls
 		display inline-block
 		margin-top 20px
+
+	.tabs
+		+below(920px)
+			flex-direction column
+			border none
+
+			&__button:not(:last-child)
+				margin-bottom 15px
+
+			&__button:last-child:after
+				display none
+

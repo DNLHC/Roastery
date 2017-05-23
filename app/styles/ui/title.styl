@@ -27,9 +27,27 @@
 		&:after
 			bottom - $titleOffset
 			right 0
-			background-image linear-gradient(to left, $cyan, $cyan 115px, transparent 115px, transparent 123px, $magenta 123px, $magenta 0)
+			background-image linear-gradient(to left, $cyan, $cyan 75%, transparent 75%, transparent calc(75% + 8px), $magenta calc(75% + 8px), $magenta 0)
 
 		&:before
 			top - $titleOffset
 			left 0
-			background-image linear-gradient(to right, $cyan, $cyan 115px, transparent 115px, transparent 123px, $magenta 123px, $magenta 0)
+			background-image linear-gradient(to right, $cyan, $cyan 75%, transparent 75%, transparent calc(75% + 8px), $magenta calc(75% + 8px), $magenta 0)
+
+	+below(920px)
+		~/_big
+			font-size 3.3em
+
+		~/_underline
+			&:before,
+			&:after
+				width 90px
+	+below(720px)
+		~/_big
+			font-size 2.85em
+
+		~/_underline
+			&:before,
+			&:after
+				width 60px
+

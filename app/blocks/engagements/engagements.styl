@@ -26,10 +26,38 @@
 			transform rotate(-90deg) translateX(-50%)
 			transform-origin top left
 
+		+below(1070px)
+			max-width 100%
+
+			&:before
+				left 15px
+
+		+below(920px)
+			padding-right 0
+			padding-left 70px
+
+		+below(720px)
+			flex-direction column
+			padding 0
+
+			&:before
+				display block
+				font-size 1.45em
+				text-decoration underline
+				position static
+				transform none
+				margin-bottom 30px
+
 	&__item
 		flex 0 1 170px
 		font-size 1rem
 		text-align center
+
+		+below(1070px)
+			font-size .9rem
+
+		+below(720px)
+			margin-bottom 35px
 
 	&__value
 		font-size 2em
@@ -38,7 +66,7 @@
 		white-space nowrap
 
 	&__label
-		font-size 0.96em
+		font-size .96em
 
 	&__icon
 		display inline-block

@@ -6,6 +6,11 @@
 		font-size 2.4em
 		font-weight 400
 
+		+below(720px)
+			font-size 2.05em
+		+below(520px)
+			font-size 1.9em
+
 	&_purple
 		background-color $magenta
 		background-image embedurl('../../svg/square.svg', 'utf8')
@@ -29,3 +34,7 @@
 	&_promo
 		margin-top 150px
 		margin-bottom 250px
+
+	+below(720px)
+		margin-top 95px
+		margin-bottom 0

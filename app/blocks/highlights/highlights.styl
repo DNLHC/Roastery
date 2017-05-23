@@ -21,6 +21,16 @@
 			& ^[0]__content
 				text-align left
 
+			+below(720px)
+				flex-direction row
+
+				& ^[0]__content
+					text-align right
+
+		+below(720px)
+			flex-direction column-reverse
+			padding-left 60px
+
 	&__image
 		min-height 200px
 
@@ -33,6 +43,14 @@
 	&__content
 		margin-x 100px
 		flex 0 0 35%
+
+		+below(940px)
+			margin-x 25px
+			flex 0 0 calc(50% - 50px)
+
+		+below(720px)
+			margin-x 0
+			flex 1 0 auto
 
 	&__mark
 		position absolute
@@ -49,6 +67,17 @@
 			height 'calc(100% - %s)' % $dateSize
 			background-color $dateStripe
 			width 1px
+
+		+below(940px)
+			&:after
+				display none
+
+		+below(720px)
+			left 0
+
+			&:after
+				display block
+
 
 	&__date
 		size $dateSize
@@ -76,11 +105,17 @@
 		flex 0 0 35%
 		text-align right
 
+		+below(720px)
+			margin-top 20px
+
 	&__title
 		font-size 1.25em
 		text-transform uppercase
 		color $cyan
 		margin-bottom 10px
+
+		+below(720px)
+			font-size 1.1em
 
 	&__lead
 		margin-bottom 30px
