@@ -1,10 +1,10 @@
 include ../tabs/tabs
 
 mixin trends()
-	+b.trends.js-trends&attributes(attributes)
+	+b.trends&attributes(attributes)
 		+b.H2.title_cyan.section__title More mobile clients
 
-		+e.box
+		+e.box.js-trends
 			include ../../svg/graph.svg
 
 			+e.marker#trends-marker

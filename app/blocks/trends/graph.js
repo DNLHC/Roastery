@@ -9,8 +9,12 @@ export default class {
 	}
 
 	initializeGraph() {
+		const graphSize = this.getGraphSize();
 		this.getEl('#svg-graph')
-			.attr({width: this.getParentWidth()});
+			.attr({
+				width: graphSize.width,
+				height: graphSize.height
+			});
 
 		const controls = this.getEl('.js-trends-controls');
 
@@ -33,11 +37,14 @@ export default class {
 	}
 
 	getPercent() {
-		return (this.getParentWidth() / 100) * this.years[this.currentYear];
+		return (this.getGraphSize().width / 100) * this.years[this.currentYear];
 	}
 
-	getParentWidth() {
-		return this.root.width();
+	getGraphSize() {
+		return {
+			width: this.root.innerWidth(),
+			height: this.root.innerHeight()
+		};
 	}
 
 	setCurrentYear(value) {
