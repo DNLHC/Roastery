@@ -8,8 +8,10 @@ include ../blocks/engagements/engagements
 include ../blocks/footer/footer
 
 
+
 block head
-	- var pageTitle = 'Roastery year review';
+	- var sitename = getData('global').sitename;
+	- var pageTitle = sitename + ' year review';
 
 block content
 	- var dataHighlights = getData('highlights');
