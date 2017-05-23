@@ -1,0 +1,11 @@
+include ../icon/icon
+
+mixin socials()
+	+b.UL.socials&attributes(attributes)
+		+e.item: a(href='#', aria-label='Facebook', title='Facebook')
+			+icon('facebook_round')
+		+e.item: a(href='#', aria-label='Twitter', title='Twitter')
+			+icon('twitter_round')
+		+e.item: a(href='#', aria-label='Linkedin', title='Linkedin')
+			+icon('linkedin_round')
+		block

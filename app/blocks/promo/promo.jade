@@ -1,4 +1,5 @@
 mixin promo()
+	- var global = getData('global');
 	+b.promo&attributes(attributes)
 		+b.H2.title_cyan.section__title DevOps as a service
 		+e.row
@@ -18,7 +19,7 @@ mixin promo()
 		+e.row._reverse
 			+e.content
 				+e.H3.heading You don't have to maintain your DevOps stack alone
-				+e.P.lead Join the Roastery Community, a collection of companies that are all running the same infrastructure packages.
+				+e.P.lead Join the #{global.sitename} Community, a collection of companies that are all running the same infrastructure packages.
 				+e.P.lead Whenever we add a new module, you get it instantly and when we fix a bug for one customer, we make it available for all - better infrastructure is just a version number bump
 
 				+b.link(href='#') See our supported plans

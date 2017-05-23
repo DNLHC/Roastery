@@ -1,4 +1,5 @@
 mixin logo()
+	- var global = getData('global');
 	+b.logo&attributes(attributes)
-		+e.link(href='#') Roastery
+		+e.link(href='#')= global.sitename
 		block

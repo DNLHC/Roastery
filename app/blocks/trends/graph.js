@@ -19,7 +19,7 @@ export default class {
 				`<button
 					type='button'
 					class='tabs__button'
-					aria-selected='${index === '2013' ? 'true' : 'false'}'
+					aria-selected='${index === '2013'}'
 					data-value='${index}'>${index}</button>`
 			);
 		});
@@ -79,12 +79,16 @@ export default class {
 			left: (percent - (marker.width() / 2))
 		}, this.animDuration);
 
-		$({width: graphRect.attr('width')})
-			.animate({width: percent}, {
+		$({width: graphRect.attr('width')}).animate(
+			{
+				width: percent
+			},
+			{
 				duration: this.animDuration,
 				step(now) {
 					graphRect.attr('width', now);
 				}
-			});
+			}
+		);
 	}
 }
